@@ -1,16 +1,22 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**trynabe/trynabe** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Hi, I'm Saran 👋
 
-Here are some ideas to get you started:
+[@trynabe](https://github.com/trynabe)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+</div>
+
+### Projects
+
+- ⌨️ [Try-Speed](https://github.com/trynabe/try-speed) — English & Thai typing practice with live stats and custom themes
+- ♟️ [Chess Clock](https://github.com/trynabe/chess-clock-project) — Arduino chess clock with move recording and image capture
+
+<!-- contribution-skyline:start -->
+## My Contribution Skyline
+
+[![My animated GitHub Contribution Skyline](./contribution-skyline.gif)](https://trynabe.github.io/trynabe/)
+
+[Explore the interactive 3D skyline](https://trynabe.github.io/trynabe/)
+<!-- contribution-skyline:end -->
+
+<sub>Skyline adapted from [Title5656](https://github.com/Title5656/Title5656) · MIT License.</sub>

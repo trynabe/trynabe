@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>trynabe · Contribution Skyline</title>
+  <link rel="stylesheet" href="./skyline.css">
+</head>
+<body>
+<main class="page">
+  <section class="card" aria-label="Contribution Skyline" aria-describedby="data-status">
+    <header class="header">
+      <div class="header-title"><h1 id="card-title">Contribution Skyline</h1><span id="sample-tag" class="sample" hidden>SAMPLE DATA</span></div>
+      <div class="toolbar">
+        <button id="grid-btn" class="icon-btn active" aria-label="2D heatmap" aria-pressed="true" title="2D heatmap">
+          <svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="12" y="2" width="6" height="6" rx="1"/><rect x="2" y="12" width="6" height="6" rx="1"/><rect x="12" y="12" width="6" height="6" rx="1"/></svg>
+        </button>
+        <button id="skyline-btn" class="icon-btn" aria-label="3D skyline" aria-pressed="false" title="3D skyline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>
+        </button>
+      </div>
+    </header>
+    <p id="data-status" class="sr-only" role="status">Loading contribution data…</p>
+    <section class="inner">
+      <div id="empty-state" class="empty-state" hidden><strong>Waiting for contribution data</strong><span>Once the GitHub update succeeds, your skyline will appear here.</span><a href="?demo=1">View a labelled sample preview ↗</a></div>
+      <div class="scene-layout" id="scene-layout">
+      <div class="scene-shell" id="scene-shell">
+        <canvas id="skyline-canvas" tabindex="0" aria-label="Contribution graph. Use arrow keys for dates. Click 3D skyline to switch the view; drag to orbit." role="img"></canvas>
+        <div id="tooltip" class="tooltip" role="tooltip"></div>
+      </div>
+      <div class="stats">
+        <div class="stat stat-total"><div class="stat-label">1 year total</div><div class="stat-main"><strong id="total">—</strong><span>contributions</span></div><div id="period" class="stat-sub">—</div></div>
+        <div class="stat stat-busiest"><div class="stat-label">Busiest day</div><div class="stat-main"><strong id="busiest">—</strong><span>contributions</span></div><div id="busiest-date" class="stat-sub">—</div></div>
+        <div class="stat stat-longest"><div class="stat-label">Longest streak</div><div class="stat-main"><strong id="longest">—</strong><span>days</span></div><div id="longest-range" class="stat-sub">—</div></div>
+        <div class="stat stat-current"><div class="stat-label">Current streak</div><div class="stat-main"><strong id="current">—</strong><span>days</span></div><div id="current-range" class="stat-sub">—</div></div>
+      </div>
+      </div>
+      <footer class="footer"><span id="help">Hover a day · arrow keys to explore</span><div class="legend"><span>Less</span><div id="legend" class="legend-colors"></div><span>More</span></div></footer>
+    </section>
+    <p class="sr-only" aria-live="polite" id="live"></p>
+  </section>
+  <details class="preferences"><summary>Appearance</summary><div class="toolbar">
+    <select id="palette" aria-label="Contribution palette"><option value="github">GitHub</option><option value="halloween">Halloween</option><option value="ocean">Ocean</option><option value="ember">Ember</option><option value="grape">Grape</option><option value="mono">Mono</option></select>
+    <button id="dark-btn" class="icon-btn" aria-label="Toggle dark mode" title="Toggle theme">◐</button>
+  </div></details>
+  <noscript>This interactive skyline requires JavaScript. <a href="https://github.com/trynabe/trynabe/blob/main/contribution-skyline-3d.png">View the generated still image</a>.</noscript>
+</main>
+<script src="./skyline.js" defer></script>
+</body>
+</html>
