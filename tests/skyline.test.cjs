@@ -27,6 +27,11 @@ test('P95 colors tolerate an outlier while bar height uses true maximum', () => 
   assert.ok(vm.runInContext('barHeight(4,1000) < 0.5',sandbox));
   assert.equal(vm.runInContext('barHeight(1000,1000)',sandbox),7.6000000000000005);
 });
+test('GitHub calendar intensity levels survive validation and rendering', () => {
+  const days=run("activityLevels(validatePayload({username:'trynabe',isDemo:false,generatedAt:'2026-10-22T13:00:00Z',days:[{date:'2026-10-19',count:0,level:0},{date:'2026-10-20',count:2,level:1},{date:'2026-10-21',count:3,level:3},{date:'2026-10-22',count:1000,level:4}],stats:{total:1005}}).days)");
+  assert.deepEqual(days.map(d=>d.level),[0,1,3,4]);
+  assert.equal(days.reduce((sum,d)=>sum+d.count,0),1005);
+});
 test('all-zero calendar and yesterday streak are safe',()=>{
   const empty=run("computeStats(normalizeDays([{date:'2026-10-20',count:0}]))");
   assert.equal(empty.total,0);assert.equal(empty.busiest.date,null);assert.equal(empty.current,0);

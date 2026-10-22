@@ -19,4 +19,3 @@
 [Explore the interactive 3D skyline](https://trynabe.github.io/trynabe/)
 <!-- contribution-skyline:end -->
 
-<sub>Skyline adapted from [Title5656](https://github.com/Title5656/Title5656) · MIT License.</sub>

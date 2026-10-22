@@ -48,18 +48,24 @@ function formatSample(){
 }
 function normalizeDays(raw){
   const validDate=s=>typeof s==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(s)&&Number.isFinite(Date.parse(s+'T00:00:00Z'))&&ymd(dateUTC(s))===s;
-  const counts=new Map();
+  const counts=new Map(), levels=new Map();
   for(const item of raw||[]){
     if(!validDate(item?.date))continue;
     const n=Number(item.count);
-    if(!Number.isFinite(n)||n<=0)continue;
+    if(!Number.isFinite(n)||n<0)continue;
     counts.set(item.date,(counts.get(item.date)||0)+Math.floor(n));
+    if(Number.isInteger(item.level)&&item.level>=0&&item.level<=4)
+      levels.set(item.date,Math.max(levels.get(item.date)||0,item.level));
   }
   const inputDates=(raw||[]).map(x=>x?.date).filter(validDate).sort();
   const end=inputDates.at(-1)||ymd(new Date()), start=inputDates[0]||ymd(plusDays(dateUTC(end),-364));
   const to=dateUTC(end), from=new Date(Math.max(dateUTC(start).getTime(),to.getTime()-370*DAY));
   let days=[];
-  for(let d=from;d<=to&&days.length<371;d=plusDays(d,1))days.push({date:ymd(d),count:counts.get(ymd(d))||0});
+  for(let d=from;d<=to&&days.length<371;d=plusDays(d,1)){
+    const date=ymd(d), day={date,count:counts.get(date)||0};
+    if(levels.has(date))day.level=levels.get(date);
+    days.push(day);
+  }
   return days;
 }
 function validatePayload(data){
@@ -68,6 +74,7 @@ function validatePayload(data){
   if(!Array.isArray(data.days)||!data.days.length)throw Error('Empty contribution calendar');
   for(const d of data.days){
     if(typeof d?.date!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(d.date)||!Number.isFinite(Date.parse(d.date+'T00:00:00Z'))||ymd(dateUTC(d.date))!==d.date||!Number.isSafeInteger(d.count)||d.count<0)throw Error('Invalid contribution day');
+    if(d.level!=null&&(!Number.isInteger(d.level)||d.level<0||d.level>4))throw Error('Invalid GitHub activity level');
   }
   const dates=data.days.map(d=>d.date).sort();
   if((dateUTC(dates.at(-1))-dateUTC(dates[0]))/DAY>=371)throw Error('Contribution range is too long');
@@ -78,7 +85,7 @@ function validatePayload(data){
 function activityLevels(days){
   const nonzero=days.map(d=>d.count).filter(n=>n>0).sort((a,b)=>a-b);
   const busy=nonzero.length?nonzero[Math.floor((nonzero.length-1)*.95)]:1;
-  return days.map(d=>({ ...d, level: d.previewLevel!=null?clamp(d.previewLevel,0,4):d.count===0?0:clamp(Math.ceil(4*d.count/Math.max(1,busy)),1,4) }));
+  return days.map(d=>({ ...d, level: d.previewLevel!=null?clamp(d.previewLevel,0,4):Number.isInteger(d.level)&&d.level>=0&&d.level<=4?d.level:d.count===0?0:clamp(Math.ceil(4*d.count/Math.max(1,busy)),1,4) }));
 }
 function computeStats(days){
   const total=days.reduce((a,d)=>a+d.count,0);
@@ -131,7 +138,7 @@ class Skyline {
       const cell={...day,week:w,dow,index:i};this.cells.push(cell);this.cellsByDate.set(day.date,cell);
     });
     $('sample-tag').hidden=!isDemo;
-    $('card-title').innerHTML=`<strong>${fmtNum(this.stats.total)}</strong> contributions in the last year`;
+    $('card-title').innerHTML=`<strong>${fmtNum(this.stats.total)}</strong> contributions in the last year${isDemo?'':' · @trynabe'}`;
     $('total').textContent=fmtNum(this.stats.total);
     $('period').textContent=`${fmtFull(this.stats.start)} – ${fmtFull(this.stats.end)}`;
     $('busiest').textContent=fmtNum(this.stats.busiest.count);
