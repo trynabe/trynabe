@@ -369,24 +369,38 @@ window.addEventListener('DOMContentLoaded',async()=>{
   controls.forEach(control=>control.disabled=true);
   document.documentElement.dataset.dataState='loading';
   $('sample-tag').hidden=true;
-  try{
-    if(demo){
-      graph.setData(formatSample(),true);
-      status.textContent='SAMPLE DATA · appearance preview only · not trynabe activity';
-    }else{
+  let loaded=false, refreshing=false, lastDays='';
+  async function refresh(){
+    if(refreshing)return;
+    refreshing=true;
+    try{
       const response=await fetch('./contributions.json',{cache:'no-store',signal:AbortSignal.timeout(12000)});
       if(!response.ok)throw Error('Contribution data is not available yet');
       const data=validatePayload(await response.json());
-      graph.setData(data.days,data.isDemo);
+      const signature=JSON.stringify(data.days);
+      if(signature!==lastDays){graph.setData(data.days,data.isDemo);lastDays=signature;}
       const scope=data.coverage?.includesAnonymizedPrivate?'public and anonymized private contributions':'GitHub contribution calendar';
       status.textContent=data.isDemo?'SAMPLE DATA · appearance preview only · not trynabe activity':`@${data.username} · ${scope} · updated ${new Date(data.generatedAt).toLocaleString('en-GB',{timeZone:'UTC',dateStyle:'medium',timeStyle:'short'})} UTC`;
-    }
+      loaded=true;
+      document.documentElement.dataset.dataState='ready';controls.forEach(control=>control.disabled=false);
+      $('empty-state').hidden=true;
+    }catch{
+      if(loaded){status.textContent='Showing the last successful contribution update · retrying automatically';return;}
+      document.documentElement.dataset.dataState='error';
+      $('card-title').textContent='Contribution Skyline';
+      status.textContent='Contribution data unavailable · retrying automatically';
+      $('empty-state').hidden=false;
+    }finally{refreshing=false;}
+  }
+  if(demo){
+    graph.setData(formatSample(),true);
+    status.textContent='SAMPLE DATA · appearance preview only · not trynabe activity';
     document.documentElement.dataset.dataState='ready';controls.forEach(control=>control.disabled=false);
     $('empty-state').hidden=true;
-  }catch{
-    document.documentElement.dataset.dataState='error';
-    $('card-title').textContent='Contribution Skyline';
-    status.textContent='Contribution data unavailable · no activity totals are being shown';
-    $('empty-state').hidden=false;
+  }else{
+    await refresh();
+    setInterval(()=>{if(!document.hidden)void refresh();},60000);
+    window.addEventListener('focus',()=>void refresh());
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)void refresh();});
   }
 });

@@ -12,9 +12,11 @@ Usage:
 """
 from __future__ import annotations
 import argparse
+import hashlib
 import io
 import json
 import os
+import re
 import shutil
 from pathlib import Path
 
@@ -138,6 +140,13 @@ def render(*, demo=False, quality=256, light=False):
     durations = [d for _, d in seq]
     converted[0].save(outgif, save_all=True, append_images=converted[1:],
                       duration=durations, loop=0, optimize=True, disposal=2)
+    if not demo and (ROOT / 'README.md').exists():
+        readme = ROOT / 'README.md'
+        version = hashlib.sha256(outgif.read_bytes()).hexdigest()[:12]
+        text = re.sub(r'(\]\(\./contribution-skyline\.gif)(?:\?[^)]*)?(\))',
+                      lambda match: f'{match[1]}?v={version}{match[2]}',
+                      readme.read_text(encoding='utf8'))
+        readme.write_text(text, encoding='utf8')
     print(f'Created {outgif.relative_to(ROOT)} ({outgif.stat().st_size/1024/1024:.2f} MB)')
     print(f'Created {outpng.relative_to(ROOT)} ({outpng.stat().st_size/1024:.0f} KB)')
 
