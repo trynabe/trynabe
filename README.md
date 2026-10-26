@@ -14,7 +14,7 @@
 <!-- contribution-skyline:start -->
 ## My Contribution Skyline
 
-[![My animated GitHub Contribution Skyline](./contribution-skyline.gif?v=924b2e7e7dd1)](https://trynabe.github.io/trynabe/)
+[![My animated GitHub Contribution Skyline](./contribution-skyline.gif?v=8bee2310705d)](https://trynabe.github.io/trynabe/)
 
 [Explore the interactive 3D skyline](https://trynabe.github.io/trynabe/)
 <!-- contribution-skyline:end -->
