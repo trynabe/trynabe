@@ -1,11 +1,3 @@
-<div align="center">
-
-# Hi, I'm Saran 👋
-
-[@trynabe](https://github.com/trynabe)
-
-</div>
-
 ### Projects
 
 - ⌨️ [Try-Speed](https://github.com/trynabe/try-speed) — English & Thai typing practice with live stats and custom themes
