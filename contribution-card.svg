@@ -396,10 +396,11 @@
 <rect x="928.20" y="124.35" width="13.45" height="13.45" rx="2.6" fill="#c6e48b"/>
 <rect x="928.20" y="140.70" width="13.45" height="13.45" rx="2.6" fill="#7bc96f"/>
 <rect x="928.20" y="157.05" width="13.45" height="13.45" rx="2.6" fill="#c6e48b"/>
+<rect x="928.20" y="173.40" width="13.45" height="13.45" rx="2.6" fill="#ebedf0"/>
 <text x="39" y="254" fill="#777" font-family="Arial, Helvetica, sans-serif" font-size="13">1 year total</text>
 <text x="39" y="285" fill="#216e39" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700">205</text>
 <text x="94" y="283" fill="#222" font-family="Arial, Helvetica, sans-serif" font-size="14">contributions</text>
-<text x="39" y="307" fill="#888" font-family="Arial, Helvetica, sans-serif" font-size="12">Oct 26 – Oct 28</text>
+<text x="39" y="307" fill="#888" font-family="Arial, Helvetica, sans-serif" font-size="12">Oct 26 – Oct 29</text>
 <text x="270" y="254" fill="#777" font-family="Arial, Helvetica, sans-serif" font-size="13">Busiest day</text>
 <text x="270" y="285" fill="#216e39" font-family="Arial, Helvetica, sans-serif" font-size="29" font-weight="700">25</text>
 <text x="308" y="283" fill="#222" font-family="Arial, Helvetica, sans-serif" font-size="14">contributions</text>
