@@ -9,30 +9,6 @@
   </a>
 </p>
 
-<h2><code>$ ./island-map</code></h2>
-
-<p align="center">
-  <a href="https://trynabe.github.io/trynabe/sky-island.html#map" title="Open full-size Island Map">
-    <picture>
-      <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/terminal/roadmap-mobile-still.svg">
-      <source media="(prefers-reduced-motion: reduce)" srcset="assets/terminal/roadmap-still.svg">
-      <source media="(max-width: 600px)" srcset="assets/terminal/roadmap-mobile.svg">
-      <img src="assets/terminal/roadmap.svg" width="100%" alt="Island Map. Starter Island, Chess Clock, Try-Tracker, and Try-Speed. Open full-size map.">
-    </picture>
-  </a>
-</p>
-
-<h2><code>$ cat toolkit.txt</code></h2>
-
-<p align="center">
-  <img src="assets/terminal/react.svg" width="102" alt="React">
-  <img src="assets/terminal/javascript.svg" width="102" alt="JavaScript">
-  <img src="assets/terminal/css.svg" width="102" alt="CSS">
-  <img src="assets/terminal/python.svg" width="102" alt="Python">
-  <img src="assets/terminal/arduino.svg" width="102" alt="Arduino">
-  <img src="assets/terminal/supabase.svg" width="102" alt="Supabase">
-</p>
-
 <h2><code>$ ls ~/projects</code></h2>
 
 <p align="center">
