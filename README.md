@@ -1,21 +1,25 @@
 <p align="center">
-  <picture>
-    <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/terminal/hero-mobile-still.svg">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/terminal/hero-still.svg">
-    <source media="(max-width: 600px)" srcset="assets/terminal/hero-mobile.svg">
-    <img src="assets/terminal/hero.svg" width="780" alt="Trynabe, the builder of Sky Island. Web apps, small tools, and hardware projects.">
-  </picture>
+  <a href="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/hero.svg" title="Open full-size Sky Island banner">
+    <picture>
+      <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/terminal/hero-mobile-still.svg">
+      <source media="(prefers-reduced-motion: reduce)" srcset="assets/terminal/hero-still.svg">
+      <source media="(max-width: 600px)" srcset="assets/terminal/hero-mobile.svg">
+      <img src="assets/terminal/hero.svg" width="100%" alt="Trynabe on Sky Island. Web apps, small tools, and hardware projects. Open full-size banner.">
+    </picture>
+  </a>
 </p>
 
 <h2><code>$ ./island-map</code></h2>
 
 <p align="center">
-  <picture>
-    <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/terminal/roadmap-mobile-still.svg">
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/terminal/roadmap-still.svg">
-    <source media="(max-width: 600px)" srcset="assets/terminal/roadmap-mobile.svg">
-    <img src="assets/terminal/roadmap.svg" width="780" alt="Island Map. Follow the trail from Starter Island to Chess Clock, Try-Tracker, and Try-Speed.">
-  </picture>
+  <a href="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/roadmap.svg" title="Open full-size Island Map">
+    <picture>
+      <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/terminal/roadmap-mobile-still.svg">
+      <source media="(prefers-reduced-motion: reduce)" srcset="assets/terminal/roadmap-still.svg">
+      <source media="(max-width: 600px)" srcset="assets/terminal/roadmap-mobile.svg">
+      <img src="assets/terminal/roadmap.svg" width="100%" alt="Island Map. Starter Island, Chess Clock, Try-Tracker, and Try-Speed. Open full-size map.">
+    </picture>
+  </a>
 </p>
 
 <h2><code>$ cat toolkit.txt</code></h2>
@@ -36,16 +40,6 @@
   <a href="https://github.com/trynabe/try-tracker"><img src="assets/sky-island/try-tracker.png" width="244" alt="Try-Tracker — Habits, tasks, and focus"></a>
   <a href="https://github.com/trynabe/try-speed"><img src="assets/sky-island/try-speed.png" width="244" alt="Try-Speed — English and Thai typing practice"></a>
 </p>
-
-<h2><code>$ open ./learning-lab</code></h2>
-
-<table>
-  <thead><tr><th>Repository</th><th>What’s inside</th></tr></thead>
-  <tbody>
-    <tr><td><a href="https://github.com/trynabe/python-coding-exercises">Python Coding Exercises</a></td><td>Programming fundamentals, functions, and file I/O</td></tr>
-    <tr><td><a href="https://github.com/trynabe/python-calculator">Python Calculator</a></td><td>A small calculator project for practicing unit tests</td></tr>
-  </tbody>
-</table>
 
 <h2><code>$ tail ./activity</code></h2>
 

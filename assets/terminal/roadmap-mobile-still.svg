@@ -6,6 +6,7 @@
 <rect x="1" y="1" width="598" height="541" fill="url(#sky)" rx="14" stroke="#284453" stroke-width="2"/>
 <rect x="2" y="2" width="596" height="539" fill="url(#stars)" rx="13"/>
 <text x="28" y="36" font-size="20" fill="#87f0cc" letter-spacing="3" font-weight="700">ISLAND MAP</text>
+<text x="572" y="36" font-size="18" fill="#a9cfcc" text-anchor="end" letter-spacing="2">FULL SIZE ↗</text>
 <path d="M151 67H449Q541 67 541 155V272Q541 323 449 323H151" fill="none" stroke="#58777c" stroke-width="3" stroke-dasharray="4 12" stroke-linecap="round"/>
 <rect x="147" y="63" width="8" height="8" fill="#b6f388" transform="rotate(45 151 67)"/>
 <rect x="445" y="63" width="8" height="8" fill="#ffce82" transform="rotate(45 449 67)"/>
