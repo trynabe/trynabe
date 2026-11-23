@@ -12,9 +12,24 @@
 <h2><code>$ ls ~/projects</code></h2>
 
 <p align="center">
-  <a href="https://github.com/trynabe/chess-clock-project"><img src="assets/sky-island/chess-clock.png" width="244" alt="Chess Clock — Arduino chess timer"></a>
-  <a href="https://github.com/trynabe/try-tracker"><img src="assets/sky-island/try-tracker.png" width="244" alt="Try-Tracker — Habits, tasks, and focus"></a>
-  <a href="https://github.com/trynabe/try-speed"><img src="assets/sky-island/try-speed.png" width="244" alt="Try-Speed — English and Thai typing practice"></a>
+  <a href="https://github.com/trynabe/chess-clock-project">
+    <picture>
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/sky-island/chess-clock-island-light.webp">
+      <img src="assets/sky-island/chess-clock-island.webp" width="244" alt="Chess Clock — Arduino chess timer">
+    </picture>
+  </a>
+  <a href="https://github.com/trynabe/try-tracker">
+    <picture>
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/sky-island/try-tracker-island-light.webp">
+      <img src="assets/sky-island/try-tracker-island.webp" width="244" alt="Try-Tracker — Habits, tasks, and focus">
+    </picture>
+  </a>
+  <a href="https://github.com/trynabe/try-speed">
+    <picture>
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/sky-island/try-speed-island-light.webp">
+      <img src="assets/sky-island/try-speed-island.webp" width="244" alt="Try-Speed — English and Thai typing practice">
+    </picture>
+  </a>
 </p>
 
 <h2><code>$ tail ./activity</code></h2>
