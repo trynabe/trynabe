@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Trynabe · Sky Island artwork</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #07121f;
+      --text: #eaf6f6;
+      --accent: #a4efca;
+      --border: #31515d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font: 1rem/1.5 Consolas, ui-monospace, monospace;
+    }
+    header, .viewer {
+      width: min(100%, 116rem);
+      margin-inline: auto;
+      padding: 0.75rem clamp(0.75rem, 2.5vw, 2rem);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    h1 { margin: 0; font-size: clamp(1.15rem, 3vw, 1.45rem); }
+    nav { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; }
+    a { color: var(--accent); text-underline-offset: 0.2em; }
+    a:hover { color: #dcfedc; }
+    .viewer label { display: inline-flex; align-items: center; min-height: 2.75rem; cursor: pointer; }
+    .viewer input { accent-color: var(--accent); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .stage {
+      max-height: 80svh;
+      overflow: auto;
+      border: 1px solid var(--border);
+      border-radius: 0.65rem;
+      background: #0a1623;
+    }
+    .artwork { width: min(100%, 1800px); margin: 0 auto; scroll-margin-top: 5rem; }
+    .artwork img { display: block; width: 100%; height: auto; }
+    #map { display: none; }
+    #map:target { display: block; }
+    #map:target ~ #banner { display: none; }
+    #actual-size:checked ~ .stage .artwork { width: 1800px; margin: 0; }
+    @media (max-width: 600px) {
+      #actual-size:checked ~ .stage .artwork { width: 600px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sky Island</h1>
+    <nav aria-label="Artwork">
+      <a href="#banner">Banner</a>
+      <a href="#map">Island map</a>
+      <a href="https://github.com/trynabe?tab=overview">Back to Overview ↗</a>
+    </nav>
+  </header>
+  <main class="viewer">
+    <input id="actual-size" type="checkbox" aria-controls="artwork-stage">
+    <label for="actual-size">Actual size</label>
+    <div id="artwork-stage" class="stage" role="region" aria-label="Scrollable Sky Island artwork" tabindex="0">
+      <figure id="map" class="artwork">
+        <picture>
+          <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/roadmap-mobile-still.svg">
+          <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/roadmap-still.svg">
+          <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/roadmap-mobile.svg">
+          <img src="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/roadmap.svg" alt="Island Map with Starter Island, Chess Clock, Try-Tracker, and Try-Speed">
+        </picture>
+      </figure>
+      <figure id="banner" class="artwork">
+        <picture>
+          <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/hero-mobile-still.svg">
+          <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/hero-still.svg">
+          <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/hero-mobile.svg">
+          <img src="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/hero.svg" alt="Trynabe on Sky Island, a floating pixel-art island with a workshop and waterfall">
+        </picture>
+      </figure>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/hero.svg" title="Open full-size Sky Island banner">
+  <a href="https://trynabe.github.io/trynabe/sky-island.html#banner" title="Open full-size Sky Island banner">
     <picture>
       <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/terminal/hero-mobile-still.svg">
       <source media="(prefers-reduced-motion: reduce)" srcset="assets/terminal/hero-still.svg">
@@ -12,7 +12,7 @@
 <h2><code>$ ./island-map</code></h2>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/trynabe/trynabe/main/assets/terminal/roadmap.svg" title="Open full-size Island Map">
+  <a href="https://trynabe.github.io/trynabe/sky-island.html#map" title="Open full-size Island Map">
     <picture>
       <source media="(max-width: 600px) and (prefers-reduced-motion: reduce)" srcset="assets/terminal/roadmap-mobile-still.svg">
       <source media="(prefers-reduced-motion: reduce)" srcset="assets/terminal/roadmap-still.svg">
