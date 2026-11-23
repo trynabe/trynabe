@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="105" viewBox="0 0 1200 105" font-family="Consolas, SFMono-Regular, Menlo, monospace" role="img">
+<title>Open the GitHub contribution calendar</title>
+<rect x="1" y="1" width="1198" height="103" fill="#0d1c2b" rx="12" stroke="#284453" stroke-width="2"/>
+<rect x="30" y="40" width="22" height="22" fill="#2a514a" rx="2"/>
+<rect x="57" y="40" width="22" height="22" fill="#459269" rx="2"/>
+<rect x="84" y="40" width="22" height="22" fill="#b6f388" rx="2"/>
+<text x="129" y="63" font-size="33" fill="#edf7fa" >GitHub contribution calendar</text>
+<text x="1160" y="63" font-size="34" fill="#ffce82" text-anchor="end">↗</text>
+</svg>

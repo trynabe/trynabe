@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="543" viewBox="0 0 600 543" font-family="Consolas, SFMono-Regular, Menlo, monospace" role="img">
+<title>Island Map — Starter Island, Chess Clock, Try-Tracker, Try-Speed</title>
+<defs><pattern id="stars" width="56" height="51" patternUnits="userSpaceOnUse"><path d="M5 8h2v2H5Zm29 28h2v2h-2Z" fill="#264453" opacity=".55"/></pattern>
+<radialGradient id="sky"><stop stop-color="#153148"/><stop offset="1" stop-color="#091422"/></radialGradient></defs>
+<style>.traveler{opacity:1}@media(prefers-reduced-motion:reduce){.traveler{display:none}}</style>
+<rect x="1" y="1" width="598" height="541" fill="url(#sky)" rx="14" stroke="#284453" stroke-width="2"/>
+<rect x="2" y="2" width="596" height="539" fill="url(#stars)" rx="13"/>
+<text x="28" y="36" font-size="20" fill="#87f0cc" letter-spacing="3" font-weight="700">ISLAND MAP</text>
+<path d="M151 67H449Q541 67 541 155V272Q541 323 449 323H151" fill="none" stroke="#58777c" stroke-width="3" stroke-dasharray="4 12" stroke-linecap="round"/>
+<rect x="147" y="63" width="8" height="8" fill="#b6f388" transform="rotate(45 151 67)"/>
+<rect x="445" y="63" width="8" height="8" fill="#ffce82" transform="rotate(45 449 67)"/>
+<rect x="445" y="318" width="8" height="8" fill="#87f0cc" transform="rotate(45 449 322)"/>
+<rect x="147" y="318" width="8" height="8" fill="#d9b0ff" transform="rotate(45 151 322)"/>
+<g transform="translate(151 153)">
+<path d="M-89 -12L0 -42l89 30v16L71 11v14L50 36v12L21 57v9L0 75l-21-9v-9l-29-9V36l-21-11V11l-18-7Z" fill="#35283a"/>
+<path d="M-89 -12L0 19v56l-21-9v-9l-29-9V36l-21-11V11l-18-7Z" fill="#594032"/>
+<path d="M0 19l89-31V4L71 11v14L50 36v12L21 57v9L0 75Z" fill="#3e2e31"/>
+<path d="M-89 -12L0-42l89 30L0 20Z" fill="#b4e675"/>
+<path d="M-89 -12L0 20l89-32v13L0 32-89 1Z" fill="#5eaa5b"/>
+<path d="M0 20l89-32v13L0 32Z" fill="#0d1324" opacity=".24"/>
+<path d="M-64 21l19 7v8l-19-7Zm31 16 15 5v8l-15-5Zm45 5 23-8v9l-23 8Z" fill="#987156" opacity=".65"/>
+<path d="M-58 -14l8-3 9 3-9 3Zm91 1 10-3 10 3-10 4ZM-23 5l9-3 9 3-9 3Z" fill="#536758" opacity=".45"/>
+<path d="M-8 8V-40H8V8Z" fill="#be8954"/><path d="M1 8V-41H8V8Z" fill="#8c5536"/><path d="M-35 -50h10v-13h13v-13h25v9h13v10h14v25H19v8h-36v-8h-18Z" fill="#427d46"/><path d="M-32 -53h14v-12h13v-9h18v10h16v11h7v7H21v9H-17v-7h-15Z" fill="#cbf187"/><path d="M-11 -53h21v-12H-2v8h-9ZM12 -43h14v-9H12Z" fill="#89bf5a"/>
+</g>
+<text x="151" y="264" font-size="27" fill="#edf7fa" text-anchor="middle" font-weight="700">Starter Island</text>
+<g transform="translate(449 153)">
+<path d="M-89 -12L0 -42l89 30v16L71 11v14L50 36v12L21 57v9L0 75l-21-9v-9l-29-9V36l-21-11V11l-18-7Z" fill="#35283a"/>
+<path d="M-89 -12L0 19v56l-21-9v-9l-29-9V36l-21-11V11l-18-7Z" fill="#594032"/>
+<path d="M0 19l89-31V4L71 11v14L50 36v12L21 57v9L0 75Z" fill="#3e2e31"/>
+<path d="M-89 -12L0-42l89 30L0 20Z" fill="#f5be69"/>
+<path d="M-89 -12L0 20l89-32v13L0 32-89 1Z" fill="#ad7839"/>
+<path d="M0 20l89-32v13L0 32Z" fill="#0d1324" opacity=".24"/>
+<path d="M-64 21l19 7v8l-19-7Zm31 16 15 5v8l-15-5Zm45 5 23-8v9l-23 8Z" fill="#987156" opacity=".65"/>
+<path d="M-58 -14l8-3 9 3-9 3Zm91 1 10-3 10 3-10 4ZM-23 5l9-3 9 3-9 3Z" fill="#536758" opacity=".45"/>
+<path d="M-29 2V-9h8v-11h9v-16h-17v-17h9v-9h12v-15H6v8h13v10h8v40h6V2Z" fill="#9f602e"/><path d="M-31 -4v-10h10v-14h9v-14h-18v-12h9v-10h13v-13H3v9h13v10h8v40h5v14Z" fill="#ffe0a4"/><path d="M9 -51h7v7H9Zm-35 39h50v6h-50Z" fill="#bf854d"/>
+</g>
+<text x="449" y="264" font-size="27" fill="#edf7fa" text-anchor="middle" font-weight="700">Chess Clock</text>
+<g transform="translate(449 408)">
+<path d="M-89 -12L0 -42l89 30v16L71 11v14L50 36v12L21 57v9L0 75l-21-9v-9l-29-9V36l-21-11V11l-18-7Z" fill="#35283a"/>
+<path d="M-89 -12L0 19v56l-21-9v-9l-29-9V36l-21-11V11l-18-7Z" fill="#594032"/>
+<path d="M0 19l89-31V4L71 11v14L50 36v12L21 57v9L0 75Z" fill="#3e2e31"/>
+<path d="M-89 -12L0-42l89 30L0 20Z" fill="#79e9b1"/>
+<path d="M-89 -12L0 20l89-32v13L0 32-89 1Z" fill="#358f76"/>
+<path d="M0 20l89-32v13L0 32Z" fill="#0d1324" opacity=".24"/>
+<path d="M-64 21l19 7v8l-19-7Zm31 16 15 5v8l-15-5Zm45 5 23-8v9l-23 8Z" fill="#987156" opacity=".65"/>
+<path d="M-58 -14l8-3 9 3-9 3Zm91 1 10-3 10 3-10 4ZM-23 5l9-3 9 3-9 3Z" fill="#536758" opacity=".45"/>
+<path d="M-28 -75h49l10 10v66h-59Z" fill="#153e49" stroke="#4ac6a9" stroke-width="5"/><path d="M-28 -75h49v11h-49Z" fill="#498c83"/><path d="M-16 -48l6 6 15-15m-21 28 6 6L5-38m-21 28 6 6L5-19" fill="none" stroke="#c0ffda" stroke-width="5"/><path d="M14 -45h8m-8 19h8m-8 19h8" fill="none" stroke="#85bfba" stroke-width="4"/>
+</g>
+<text x="449" y="519" font-size="27" fill="#edf7fa" text-anchor="middle" font-weight="700">Try-Tracker</text>
+<g transform="translate(151 408)">
+<path d="M-89 -12L0 -42l89 30v16L71 11v14L50 36v12L21 57v9L0 75l-21-9v-9l-29-9V36l-21-11V11l-18-7Z" fill="#35283a"/>
+<path d="M-89 -12L0 19v56l-21-9v-9l-29-9V36l-21-11V11l-18-7Z" fill="#594032"/>
+<path d="M0 19l89-31V4L71 11v14L50 36v12L21 57v9L0 75Z" fill="#3e2e31"/>
+<path d="M-89 -12L0-42l89 30L0 20Z" fill="#cba0f2"/>
+<path d="M-89 -12L0 20l89-32v13L0 32-89 1Z" fill="#784bab"/>
+<path d="M0 20l89-32v13L0 32Z" fill="#0d1324" opacity=".24"/>
+<path d="M-64 21l19 7v8l-19-7Zm31 16 15 5v8l-15-5Zm45 5 23-8v9l-23 8Z" fill="#987156" opacity=".65"/>
+<path d="M-58 -14l8-3 9 3-9 3Zm91 1 10-3 10 3-10 4ZM-23 5l9-3 9 3-9 3Z" fill="#536758" opacity=".45"/>
+<path d="M-40 -50h80v47h-80Z" fill="#56386f" stroke="#b388e2" stroke-width="4"/><path d="M-36 -53h72v11h-72Z" fill="#dfbaed"/><path d="M-29 -40h10v8h-10zm15 0h10v8h-10zm15 0h10v8H1zm15 0h10v8H16zM-29-26h10v8h-10zm15 0h10v8h-10zm15 0h10v8H1zm15 0h10v8H16zM-22-13h45v6h-45z" fill="#ffe0ff"/><path d="M-41 -4h82v6h-82Z" fill="#3b2458"/>
+</g>
+<text x="151" y="519" font-size="27" fill="#edf7fa" text-anchor="middle" font-weight="700">Try-Speed</text>
+
+</svg>
