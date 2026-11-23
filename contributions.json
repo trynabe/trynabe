@@ -1,6 +1,6 @@
 {
   "username": "trynabe",
-  "generatedAt": "2026-11-23T02:28:20.324191+00:00",
+  "generatedAt": "2026-11-23T07:49:50.516764+00:00",
   "isDemo": false,
   "days": [
     {
@@ -1340,7 +1340,7 @@
     },
     {
       "date": "2026-08-17",
-      "count": 5,
+      "count": 3,
       "level": 1
     },
     {
@@ -1540,7 +1540,7 @@
     },
     {
       "date": "2026-09-26",
-      "count": 3,
+      "count": 2,
       "level": 1
     },
     {
@@ -1690,13 +1690,13 @@
     },
     {
       "date": "2026-10-26",
-      "count": 1,
-      "level": 1
+      "count": 0,
+      "level": 0
     },
     {
       "date": "2026-10-27",
-      "count": 8,
-      "level": 2
+      "count": 2,
+      "level": 1
     },
     {
       "date": "2026-10-28",
@@ -1830,20 +1830,20 @@
     },
     {
       "date": "2026-11-23",
-      "count": 0,
-      "level": 0
+      "count": 1,
+      "level": 1
     }
   ],
   "stats": {
-    "total": 233,
+    "total": 224,
     "busiestCount": 25,
     "busiestDate": "2026-10-10",
     "longestStreak": 4,
     "longestFrom": "2026-02-16",
     "longestTo": "2026-02-19",
-    "currentStreak": 0,
-    "currentFrom": null,
-    "currentTo": null,
+    "currentStreak": 1,
+    "currentFrom": "2026-11-23",
+    "currentTo": "2026-11-23",
     "startDate": "2025-11-23",
     "endDate": "2026-11-23"
   },
